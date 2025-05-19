@@ -38,12 +38,12 @@
     - suitStorage
   - type: AmmoCounter
   - type: Gun
-    fireRate: 1
+    fireRate: 0.5
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/clake.ogg #imp
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -51,7 +51,11 @@
     capacity: 3
     proto: GrenadeFrag
     soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      path: /Audio/Items/change_jaws.ogg #imp
+      params:
+        volume: -3
+    soundRack:
+      path: /Audio/_Impstation/Weapons/Guns/Cock/clake_cock.ogg #imp
 #imp edit begin; weapon melee
   - type: MeleeWeapon
     range: 0.8
@@ -97,7 +101,7 @@
   - type: Gun
     fireRate: 0.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+      path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg #imp
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -105,7 +109,13 @@
     proto: CartridgeRocket
     capacity: 1
     soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      path: /Audio/Items/change_jaws.ogg #imp
+      params:
+        volume: -3
+    soundRack:
+      path: /Audio/Items/change_jaws.ogg #imp
+      params:
+        volume: -3
   - type: MagazineVisuals
     magState: mag
     steps: 2

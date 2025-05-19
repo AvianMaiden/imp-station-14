@@ -50,8 +50,15 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/mosin.ogg #imp
   - type: Sprite
     sprite: _Impstation/Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi #imp
+  - type: BallisticAmmoProvider #imp
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+      params:
+        volume: -4
 #imp edit begin; weapon melee
   - type: MeleeWeapon
     range: 2
@@ -127,7 +134,7 @@
       path: /Audio/Effects/hit_kick.ogg
     soundSwing:
       path: /Audio/_Impstation/Weapons/Guns/Melee/shove_foley.ogg
-    resetOnHandSelected: true
+    resetOnHandSelected: false
   - type: AltFireMelee
     attackType: Heavy
   - type: DamageOtherOnHit #for throwing
