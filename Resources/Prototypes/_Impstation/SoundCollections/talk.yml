@@ -1,0 +1,5 @@
+- type: soundCollection
+  id: VoxExclaim
+  files:
+  - /Audio/Voice/Talk/vox_exclaim.ogg
+  - /Audio/_DEN/Voice/Talk/vox_exclaim2.ogg

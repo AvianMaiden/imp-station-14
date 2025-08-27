@@ -147,8 +147,6 @@
       collection: MaleSigh #placeholder
     Crying:
       collection: VoxCry
-      params:
-        volume: -7
     Whistle:
       collection: Whistles
     Weh:
@@ -161,22 +159,14 @@
       collection: Ungh
     Gasp:
       collection: VoxGasp
-      params:
-        volume: 10
     DefaultDeathgasp:
       collection: MaleDeathGasp #placeholder
     Chitter:
       collection: VoxChitter
-      params:
-        volume: -5
     Coo:
       collection: VoxCoo
-      params:
-        volume: -7
     Hiss:
       collection: VoxHiss
-      params:
-        volume: -5
     Caw:
       collection: KodepiiaCaws
   params:
@@ -201,8 +191,6 @@
       collection: FemaleSigh #placeholder
     Crying:
       collection: VoxCry
-      params:
-        volume: -7
     Whistle:
       collection: Whistles
     Weh:
@@ -213,22 +201,14 @@
       collection: Ungh
     Gasp:
       collection: VoxGasp
-      params:
-        volume: 10
     DefaultDeathgasp:
       collection: FemaleDeathGasp #placeholder
     Chitter:
       collection: VoxChitter
-      params:
-        volume: -5
     Coo:
       collection: VoxCoo
-      params:
-        volume: -7
     Hiss:
       collection: VoxHiss
-      params:
-        volume: -5
     Caw:
       collection: KodepiiaCaws
   params:
@@ -730,8 +710,6 @@
       collection: Pops
     Coo:
       collection: VoxCoo
-      params:
-        volume: -7
     Wuhey:
       collection: Wuhey
     Ungh:
@@ -814,8 +792,6 @@
       collection: Pops
     Coo:
       collection: VoxCoo
-      params:
-        volume: -7
     Wuhey:
       collection: Wuhey
     Ungh:

@@ -149,7 +149,7 @@
   askSound:
     path: /Audio/Voice/Talk/vox_ask.ogg
   exclaimSound:
-    path: /Audio/Voice/Talk/vox_exclaim.ogg
+    collection: VoxExclaim #imp edit
 
 - type: speechSounds
   id: Arachnid
