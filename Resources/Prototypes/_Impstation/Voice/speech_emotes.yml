@@ -55,6 +55,27 @@
     - hisses!
 
 - type: emote
+  id: VoxHiss
+  name: chat-emote-name-vox-hiss
+  category: Vocal
+  available: false
+  icon: _Impstation/Interface/Emotes/voxhiss.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-vox-hiss"]
+  chatTriggers:
+  - hiss
+  - hiss.
+  - hiss!
+  - hisses
+  - hisses.
+  - hisses!
+
+- type: emote
   id: Wuhey
   name: chat-emote-name-wuhey
   category: Vocal

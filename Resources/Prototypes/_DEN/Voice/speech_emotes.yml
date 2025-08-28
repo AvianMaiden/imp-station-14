@@ -1,0 +1,16 @@
+# Harpy
+- type: emote #imp but ported from Den; intermixed with DV but couldn't trace back on DV
+  id: Hoot
+  name: den-chat-emote-name-hoot
+  category: Vocal
+  available: false
+  icon: _Impstation/Interface/Emotes/coo.png
+  blacklist:
+    components:
+    - SiliconEmotes
+  chatMessages: [hoots.]
+  chatTriggers:
+    - hoots
+    - hoot
+    - hooted
+    - hooting

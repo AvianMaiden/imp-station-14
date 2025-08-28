@@ -165,10 +165,12 @@
       collection: VoxChitter
     Coo:
       collection: VoxCoo
-    Hiss:
+    VoxHiss:
       collection: VoxHiss
     Caw:
       collection: KodepiiaCaws
+    Hoot:
+      collection: Hoot
   params:
     variation: 0.125
 
@@ -207,10 +209,12 @@
       collection: VoxChitter
     Coo:
       collection: VoxCoo
-    Hiss:
+    VoxHiss:
       collection: VoxHiss
     Caw:
       collection: KodepiiaCaws
+    Hoot:
+      collection: Hoot
   params:
     variation: 0.125
 
@@ -714,6 +718,8 @@
       collection: Wuhey
     Ungh:
       collection: Ungh
+    Hoot:
+      collection: Hoot
 
 - type: emoteSounds
   id: YoungKodepiia
@@ -796,6 +802,8 @@
       collection: Wuhey
     Ungh:
       collection: Ungh
+    Hoot:
+      collection: Hoot
 
 - type: emoteSounds
   id: TckTck
