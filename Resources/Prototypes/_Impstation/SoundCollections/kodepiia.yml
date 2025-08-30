@@ -277,6 +277,7 @@
   files:
   - /Audio/_Impstation/Voice/Vox/voxchitter1.ogg
   - /Audio/_Impstation/Voice/Vox/voxchitter2.ogg
+  - /Audio/_Impstation/Voice/Vox/voxchitter3.ogg
   - /Audio/Voice/Moth/moth_chitter.ogg
 
 - type: soundCollection

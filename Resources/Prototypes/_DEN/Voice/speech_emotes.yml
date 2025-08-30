@@ -4,7 +4,7 @@
   name: den-chat-emote-name-hoot
   category: Vocal
   available: false
-  icon: _Impstation/Interface/Emotes/coo.png
+  icon: _Impstation/Interface/Emotes/squeak.png
   blacklist:
     components:
     - SiliconEmotes
