@@ -31,7 +31,7 @@
         path: "/Textures/Parallaxes/Asteroids.png"
       slowness: 0.968046875
       scale: "1.2, 1.2"
-      scrolling: "0.018, 0.01
+      scrolling: "0.018, 0.01"
     - texture:
         !type:ImageParallaxTextureSource
         path: "/Textures/Parallaxes/KettleParallaxNeb.png"
