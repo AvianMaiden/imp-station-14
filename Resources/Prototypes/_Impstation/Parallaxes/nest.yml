@@ -30,18 +30,19 @@
         !type:ImageParallaxTextureSource
         path: "/Textures/Parallaxes/Asteroids.png"
       slowness: 0.968046875
-      scale: "1.3, 1.3"
-      scrolling: "0.02, 0.0"
+      scale: "1.2, 1.2"
+      scrolling: "0.018, 0.01
     - texture:
         !type:ImageParallaxTextureSource
         path: "/Textures/Parallaxes/KettleParallaxNeb.png"
       slowness: 0.969046875
-      scale: "0.5, 0.5"
+      scale: "0.3, 0.3"
     - texture:
         !type:ImageParallaxTextureSource
         path: "/Textures/Parallaxes/Asteroids.png"
       slowness: 0.938046875
-      scrolling: "-0.02, 0.0"
+      scale: "0.95, 0.95"
+      scrolling: "-0.0075, -0.009"
       worldHomePosition: "-624, 333"
   layersLQ:
     - texture:
