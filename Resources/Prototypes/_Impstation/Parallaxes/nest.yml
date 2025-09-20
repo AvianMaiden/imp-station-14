@@ -5,7 +5,7 @@
         !type:ImageParallaxTextureSource
         path: "/Textures/_Impstation/Parallaxes/hummingbird_space.png"
       slowness: 0.978046875
-      scale: ".68, .68"
+      scale: ".45, .45"
     - texture:
         !type:GeneratedParallaxTextureSource
         id: "hq_wizard_stars"
