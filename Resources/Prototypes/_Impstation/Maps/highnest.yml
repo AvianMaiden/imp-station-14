@@ -25,7 +25,7 @@
               minCount: 0
               maxCount: 0
               paths:
-              - /Maps/Shuttles/trading_outpost.yml
+                - /Maps/Shuttles/trading_outpost.yml
         - type: StationJobs
           availableJobs: # Total of 65 jobs roundstart, max of 77 inc. latejoins and trainees.
             # command - 8
