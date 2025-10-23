@@ -1,7 +1,7 @@
 - type: gameMap
   id: Highnest
   mapName: 'Highnest Station'
-  mapPath: /_Impstation/Maps/highnest.yml
+  mapPath: /Maps/_Impstation/highnest.yml
   minPlayers: 45
   maxPlayers: 80
   stations:
