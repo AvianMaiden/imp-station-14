@@ -15,8 +15,6 @@
             prefixCreator: '-VX'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency.yml
-        - type: StationArrivals
-          shuttlePath: /Maps/Shuttles/arrivals.yml
         - type: StationCargoShuttle
           path: /Maps/_Impstation/Shuttles/cargo_highnest.yml
         - type: GridSpawn
@@ -27,7 +25,7 @@
               paths:
                 - /Maps/Shuttles/trading_outpost.yml
         - type: StationJobs
-          availableJobs: # Total of 65 jobs roundstart, max of 77 inc. latejoins and trainees.
+          availableJobs: # Total of 67 jobs roundstart, max of 79 inc. latejoins and trainees.
             # command - 8
             Captain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
@@ -37,16 +35,16 @@
             HeadOfSecurity: [ 1, 1 ]
             HospitalityDirector: [ 1, 1 ]
             Quartermaster: [ 1, 1 ]
-            # service - 16
+            # service - 18
             Bartender: [ 2, 2 ]
-            Botanist: [ 3, 3 ]
+            Botanist: [ 2, 2 ]
             Chaplain: [ 1, 1 ]
             Chef: [ 2, 2 ]
-            Clown: [ 1, 1 ]
+            Clown: [ 2, 2 ]
             Janitor: [ 2, 2 ]
             Librarian: [ 1, 1 ]
-            Mime: [ 1, 1 ]
-            Musician: [ 1, 1 ]
+            Mime: [ 2, 2 ]
+            Musician: [ 2, 2 ]
             Reporter: [ 2, 2 ]
             # engineering - 7-10
             AtmosphericTechnician: [ 3, 3 ]
