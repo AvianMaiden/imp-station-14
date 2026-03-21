@@ -1,0 +1,270 @@
+- type: entity
+  parent: BaseStructure
+  id: BaseArmoryFenceMetal
+  name: armory cage fence
+  description: A non-electric chain link fence that extends to the ceiling, intended for secure areas.
+  abstract: true
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/grille_hit.ogg"
+  - type: Sprite
+    sprite: Structures/Walls/fence.rsi
+    drawdepth: WallTops
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 3
+            max: 5
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Appearance
+  - type: AnimationPlayer
+  - type: RCDDeconstructable
+    cost: 2
+    delay: 2
+    fx: EffectRCDDeconstruct2
+  - type: AcousticData # VDS
+    absorption: 2
+
+- type: entity
+  parent: BaseArmoryFenceMetal
+  id: FenceArmoryMetalBroken
+  name: broken armory cage fence
+  description: Oh shit.
+  components:
+  - type: Sprite
+    layers:
+    - state: straight_broken
+  - type: Physics
+    canCollide: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.10,-0.5,0.10,0.5"
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - TableLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseArmoryFenceMetal
+  id: ArmoryFenceMetalStraight
+  suffix: Straight
+  components:
+  - type: Icon
+    sprite: Structures/Walls/fence.rsi
+    state: icon_straight
+  - type: Sprite
+    layers:
+    - state: straight
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.10,-0.5,0.10,0.5"
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Items/wirecutter.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PartRodMetal1:
+            min: 2
+            max: 4
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseArmoryFenceMetal
+  id: ArmoryFenceMetalCorner
+  suffix: Corner
+  components:
+  - type: Sprite
+    layers:
+    - state: corner
+  - type: Fixtures
+    fixtures:
+      # needs two shapes to properly handle a triangle corner without weirdness
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.5"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+      fix2:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.1,-0.1,0.1"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+
+- type: entity
+  parent: BaseArmoryFenceMetal
+  id: ArmoryFenceMetalEnd
+  suffix: End
+  components:
+  - type: Icon
+    sprite: Structures/Walls/fence.rsi
+    state: icon_end
+  - type: Sprite
+    layers:
+    - state: end
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.5,0.1,0.0"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+
+- type: entity
+  parent: BaseArmoryFenceMetal
+  id: ArmoryFenceMetalGate
+  name: armory cage gate
+  description: A fence gate with an electronic lock. Looks like the only way is through.
+  components:
+  - type: Sprite
+    layers:
+    - state: end
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.1,0.5,0.1"
+        density: 1000
+        mask:
+        - TableMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: InteractionOutline
+  - type: Door
+    denySound: !type:SoundCollectionSpecifier
+      params:
+        variation: null
+        playOffsetSeconds: 0
+        loop: False
+        referenceDistance: 1
+        rolloffFactor: 1
+        maxDistance: 15
+        pitch: 1
+        volume: 0
+      collection: FenceRattle
+    openSpriteState: door_opened
+    closedSpriteState: door_closed
+    canPry: false
+    occludes: false
+    changeAirtight: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0
+    closeTimeTwo: 0
+    openTimeOne: 0
+    openTimeTwo: 0
+    openingAnimationTime: 0
+    closingAnimationTime: 0
+    openSound:
+      collection: FenceRattle
+    closeSound:
+      collection: FenceRattle
+  - type: AccessReader
+    loggingDisabled: True
+    accessLog: [ ]
+    accessKeys: [ ]
+    accessListsOriginal:
+    - - Armory
+    access:
+    - - Armory
+    denyTags: [ ]
+  - type: Lock
+    unlockingSound: !type:SoundPathSpecifier
+        params:
+            volume: -5
+        path: /Audio/Machines/door_lock_off.ogg
+    lockingSound: !type:SoundPathSpecifier
+        params:
+            volume: -5
+        path: /Audio/Machines/door_lock_on.ogg
