@@ -19,27 +19,28 @@
     anchored: true
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StrongMetallic
+    damageModifierSet: FlimsyMetallic
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 400
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
           PartRodMetal1:
-            min: 3
-            max: 5
+            min: 5
+            max: 8
+          SheetPlasteel1:
+            min: 1
+            max: 2
+      - !type:ChangeConstructionNodeBehavior
+        node: broken
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Appearance
@@ -73,28 +74,33 @@
         - FullTileMask
         layer:
         - TableLayer
+  - type: InteractionPopup
+    interactSuccessString: fence-rattle-success
+    messagePerceivedByOthers: fence-rattle-success
+    interactSuccessSound:
+      collection: FenceRattle
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 150
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
           PartRodMetal1:
+            min: 2
+            max: 4
+          SheetPlasteel1:
             min: 1
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
 
 - type: entity
   parent: BaseArmoryFenceMetal
@@ -119,26 +125,30 @@
         layer:
         - MidImpassable
         - LowImpassable
+  - type: InteractionPopup
+    interactSuccessString: fence-rattle-success
+    messagePerceivedByOthers: fence-rattle-success
+    interactSuccessSound:
+      collection: FenceRattle
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 400
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 100
-      behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Items/wirecutter.ogg
+          collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
           PartRodMetal1:
-            min: 2
-            max: 4
+            min: 5
+            max: 8
+          SheetPlasteel1:
+            min: 1
+            max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
@@ -172,6 +182,11 @@
         layer:
         - MidImpassable
         - LowImpassable
+  - type: InteractionPopup
+    interactSuccessString: fence-rattle-success
+    messagePerceivedByOthers: fence-rattle-success
+    interactSuccessSound:
+      collection: FenceRattle
 
 - type: entity
   parent: BaseArmoryFenceMetal
@@ -196,12 +211,18 @@
         layer:
         - MidImpassable
         - LowImpassable
+  - type: InteractionPopup
+    interactSuccessString: fence-rattle-success
+    messagePerceivedByOthers: fence-rattle-success
+    interactSuccessSound:
+      collection: FenceRattle
 
 - type: entity
   parent: BaseArmoryFenceMetal
   id: ArmoryFenceMetalGate
   name: armory cage gate
-  description: A fence gate with an electronic lock. Looks like the only way is through.
+  suffix: armory locked
+  description: A fence gate with an electronic lock, similar to any ol' locker. Looks like the only way is through.
   components:
   - type: Sprite
     layers:
@@ -251,7 +272,6 @@
     closeSound:
       collection: FenceRattle
   - type: AccessReader
-    loggingDisabled: True
     accessLog: [ ]
     accessKeys: [ ]
     accessListsOriginal:
