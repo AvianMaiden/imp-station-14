@@ -14,7 +14,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '-VX'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Shuttles/emergency.yml
+          emergencyShuttlePath: /Maps/_Impstation/Shuttles/emergency_highnest.yml
         - type: StationCargoShuttle
           path: /Maps/_Impstation/Shuttles/cargo_highnest.yml
         - type: GridSpawn
