@@ -4,8 +4,8 @@ meta:
   engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 06:07:54
-  entityCount: 41524
+  time: 05/03/2026 02:29:47
+  entityCount: 41529
 maps:
 - 1
 grids:
@@ -13630,12 +13630,6 @@ entities:
     - type: Transform
       pos: -2.5,67.5
       parent: 2
-    - type: Door
-      secondsUntilStateChange: -10580.772
-      state: Opening
-    - type: DeviceLinkSource
-      lastSignals:
-        DoorStatus: True
 - proto: AirlockAssemblyCentralCommandGlass
   entities:
   - uid: 15582
@@ -16770,12 +16764,6 @@ entities:
     - type: Transform
       pos: -43.5,143.5
       parent: 2
-    - type: Door
-      secondsUntilStateChange: -5548.2437
-      state: Opening
-    - type: DeviceLinkSource
-      lastSignals:
-        DoorStatus: True
   - uid: 20339
     components:
     - type: Transform
@@ -91631,10 +91619,30 @@ entities:
     - type: Transform
       pos: 12.183107,59.261234
       parent: 2
-  - uid: 16244
+  - uid: 8676
     components:
     - type: Transform
-      pos: -45.276134,113.404144
+      pos: -45.6068,114.09304
+      parent: 2
+  - uid: 11588
+    components:
+    - type: Transform
+      pos: -47.70055,114.64773
+      parent: 2
+  - uid: 11602
+    components:
+    - type: Transform
+      pos: -46.95055,114.66335
+      parent: 2
+  - uid: 12746
+    components:
+    - type: Transform
+      pos: -46.302113,114.64773
+      parent: 2
+  - uid: 12752
+    components:
+    - type: Transform
+      pos: -45.380238,113.28835
       parent: 2
   - uid: 16267
     components:
@@ -91680,21 +91688,6 @@ entities:
     components:
     - type: Transform
       pos: -26.933935,141.41484
-      parent: 2
-  - uid: 22744
-    components:
-    - type: Transform
-      pos: -47.47944,114.56871
-      parent: 2
-  - uid: 22751
-    components:
-    - type: Transform
-      pos: -46.495064,114.63121
-      parent: 2
-  - uid: 22752
-    components:
-    - type: Transform
-      pos: -45.580822,114.19321
       parent: 2
   - uid: 29125
     components:
@@ -96809,32 +96802,32 @@ entities:
   entities:
   - uid: 11619
     components:
-    - type: MetaData
-      name: station beacon ARCADE
     - type: Transform
       pos: 14.5,109.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Arcade
   - uid: 11620
     components:
-    - type: MetaData
-      name: station beacon MEET
     - type: Transform
       pos: 14.5,98.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Meeting Room
   - uid: 11621
     components:
-    - type: MetaData
-      name: station beacon CLASS
     - type: Transform
       pos: 14.5,89.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Classroom
   - uid: 11644
     components:
-    - type: MetaData
-      name: station beacon BOXING
     - type: Transform
       pos: 41.5,93.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Boxing Ring
 - proto: DefaultStationBeaconAICore
   entities:
   - uid: 11571
@@ -96902,10 +96895,10 @@ entities:
       parent: 2
 - proto: DefaultStationBeaconBridge
   entities:
-  - uid: 11588
+  - uid: 12774
     components:
     - type: Transform
-      pos: -26.5,121.5
+      pos: -26.5,122.5
       parent: 2
 - proto: DefaultStationBeaconBrig
   entities:
@@ -96937,11 +96930,11 @@ entities:
       parent: 2
   - uid: 11645
     components:
-    - type: MetaData
-      name: station beacon CARGODOCK
     - type: Transform
       pos: 79.5,73.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Cargo Dock
 - proto: DefaultStationBeaconCargoReception
   entities:
   - uid: 11643
@@ -96972,20 +96965,20 @@ entities:
       parent: 2
 - proto: DefaultStationBeaconCommand
   entities:
-  - uid: 11602
-    components:
-    - type: MetaData
-      name: station beacon CONF
-    - type: Transform
-      pos: -16.5,118.5
-      parent: 2
   - uid: 11635
     components:
-    - type: MetaData
-      name: station beacon COMBREAK
     - type: Transform
       pos: -9.5,133.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Command Breakroom
+  - uid: 12747
+    components:
+    - type: Transform
+      pos: -16.5,120.5
+      parent: 2
+    - type: NavMapBeacon
+      defaultText: Conference Room
 - proto: DefaultStationBeaconCourtroom
   entities:
   - uid: 11574
@@ -97030,18 +97023,18 @@ entities:
       parent: 2
   - uid: 11593
     components:
-    - type: MetaData
-      name: station beacon MED
     - type: Transform
       pos: -114.5,115.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Docking Arm Medical
   - uid: 11638
     components:
-    - type: MetaData
-      name: station beacon NORTHDOCK
     - type: Transform
       pos: 55.5,148.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Old Dock
 - proto: DefaultStationBeaconDorms
   entities:
   - uid: 9081
@@ -97165,11 +97158,11 @@ entities:
   entities:
   - uid: 8901
     components:
-    - type: MetaData
-      name: station beacon EVAC
     - type: Transform
       pos: -17.5,22.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Janitor's Closet Terminal
   - uid: 11580
     components:
     - type: Transform
@@ -97207,11 +97200,11 @@ entities:
   entities:
   - uid: 8115
     components:
-    - type: MetaData
-      name: station beacon EVAC
     - type: Transform
       pos: -22.5,24.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Materials Terminal
   - uid: 11608
     components:
     - type: Transform
@@ -97228,18 +97221,18 @@ entities:
   entities:
   - uid: 11599
     components:
-    - type: MetaData
-      name: station beacon NAME
     - type: Transform
       pos: -89.5,90.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Pelastus Medical Center
   - uid: 11627
     components:
-    - type: MetaData
-      name: station beacon MEDVOX
     - type: Transform
       pos: 31.5,147.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: North Vox Clinic
 - proto: DefaultStationBeaconMime
   entities:
   - uid: 9106
@@ -97314,11 +97307,11 @@ entities:
   entities:
   - uid: 8927
     components:
-    - type: MetaData
-      name: station beacon SALVARM
     - type: Transform
       pos: 104.5,122.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Salvage Arm
   - uid: 11639
     components:
     - type: Transform
@@ -97340,66 +97333,66 @@ entities:
       parent: 2
   - uid: 11567
     components:
-    - type: MetaData
-      name: station beacon RANGE
     - type: Transform
       pos: 18.5,75.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Shooting Range
 - proto: DefaultStationBeaconSecurityCheckpoint
   entities:
   - uid: 8540
     components:
-    - type: MetaData
-      name: station beacon EVAC
     - type: Transform
       pos: -8.5,15.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Checkpoint Terminal
   - uid: 11592
     components:
-    - type: MetaData
-      name: station beacon MED
     - type: Transform
       pos: -98.5,95.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Checkpoint Medical
   - uid: 11626
     components:
-    - type: MetaData
-      name: station beacon SECVOX
     - type: Transform
       pos: 37.5,159.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Checkpoint Vox
   - uid: 11642
     components:
-    - type: MetaData
-      name: station beacon SEC CHECK EAST
     - type: Transform
       pos: 66.5,125.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Checkpoint East
 - proto: DefaultStationBeaconService
   entities:
   - uid: 11628
     components:
-    - type: MetaData
-      name: station beacon BREAK
     - type: Transform
       pos: -11.5,107.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Service Breakroom
 - proto: DefaultStationBeaconSMEngine
   entities:
   - uid: 11613
     components:
-    - type: MetaData
-      name: station beacon TURB
     - type: Transform
       pos: -26.5,161.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Turbine Hall
   - uid: 11616
     components:
-    - type: MetaData
-      name: station beacon CONTROL
     - type: Transform
       pos: -17.5,154.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Control Room
   - uid: 11617
     components:
     - type: Transform
@@ -97414,6 +97407,8 @@ entities:
     - type: Transform
       pos: 8.5,185.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Solars N
 - proto: DefaultStationBeaconSolarsNW
   entities:
   - uid: 11612
@@ -97444,11 +97439,11 @@ entities:
       parent: 2
   - uid: 11591
     components:
-    - type: MetaData
-      name: station beacon VIRO
     - type: Transform
       pos: -107.5,99.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Virology
 - proto: DefaultStationBeaconTechVault
   entities:
   - uid: 11603
@@ -97477,6 +97472,8 @@ entities:
     - type: Transform
       pos: 0.5,98.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Clown/Mime
 - proto: DefaultStationBeaconToolRoom
   entities:
   - uid: 11572
@@ -97495,32 +97492,32 @@ entities:
   entities:
   - uid: 11622
     components:
-    - type: MetaData
-      name: station beacon VOXNORTH
     - type: Transform
       pos: 24.5,167.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Vox District North
   - uid: 11623
     components:
-    - type: MetaData
-      name: station beacon VOXWEST
     - type: Transform
       pos: -2.5,160.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Vox District West
   - uid: 11624
     components:
-    - type: MetaData
-      name: station beacon VOXSOUTH
     - type: Transform
       pos: 12.5,148.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Vox District South
   - uid: 11625
     components:
-    - type: MetaData
-      name: station beacon VOXEAST
     - type: Transform
       pos: 28.5,155.5
       parent: 2
+    - type: NavMapBeacon
+      defaultText: Vox District East
 - proto: DefaultStationBeaconWardensOffice
   entities:
   - uid: 11563
@@ -203617,6 +203614,12 @@ entities:
     - type: Transform
       pos: -40.5,133.5
       parent: 2
+  - uid: 12749
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -104.5,100.5
+      parent: 2
   - uid: 15389
     components:
     - type: Transform
@@ -204402,11 +204405,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -96.5,102.5
       parent: 2
-  - uid: 8676
-    components:
-    - type: Transform
-      pos: -109.5,101.5
-      parent: 2
   - uid: 9500
     components:
     - type: Transform
@@ -204474,6 +204472,11 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -42.5,87.5
+      parent: 2
+  - uid: 12748
+    components:
+    - type: Transform
+      pos: -109.5,101.5
       parent: 2
   - uid: 13429
     components:
@@ -207566,12 +207569,6 @@ entities:
     components:
     - type: Transform
       pos: -109.5,90.5
-      parent: 2
-  - uid: 37494
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -104.5,100.5
       parent: 2
   - uid: 37496
     components:
@@ -232070,6 +232067,38 @@ entities:
       - SurveillanceCameraCommand
       nameSet: True
       id: Research Director
+  - uid: 12758
+    components:
+    - type: Transform
+      pos: 9.5,137.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: AI External North
+  - uid: 12772
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 14.5,132.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: AI External East
+  - uid: 12773
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 9.5,127.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: AI External South
   - uid: 15737
     components:
     - type: Transform
@@ -232298,6 +232327,17 @@ entities:
       - SurveillanceCameraEngineering
       nameSet: True
       id: Control Room
+  - uid: 12753
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -30.5,162.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: Reactor Housing Entrance
   - uid: 17737
     components:
     - type: Transform
