@@ -97306,14 +97306,14 @@ entities:
       pos: -89.5,90.5
       parent: 2
     - type: NavMapBeacon
-      defaultText: Pelastus Medical Center
+      defaultText: Medical Center
   - uid: 11627
     components:
     - type: Transform
       pos: 31.5,147.5
       parent: 2
     - type: NavMapBeacon
-      defaultText: North Vox Clinic
+      defaultText: North Nitrogen Clinic
 - proto: DefaultStationBeaconMime
   entities:
   - uid: 9106
@@ -97441,7 +97441,7 @@ entities:
       pos: 37.5,159.5
       parent: 2
     - type: NavMapBeacon
-      defaultText: Checkpoint Vox
+      defaultText: Checkpoint Nitrogen District
   - uid: 11642
     components:
     - type: Transform
